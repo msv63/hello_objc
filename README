@@ -1,0 +1,7 @@
+# clang -g -O0 -std=c11 BareClass.m hello.m -I/usr/local/include -L/usr/local/lib -lobjc -o hello
+# ./hello
+Hello, World!!
+# lldb -- hello
+(lldb) breakpoint set -f hello.m -l 35
+(lldb) run
+(lldb) gui
