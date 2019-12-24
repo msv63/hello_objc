@@ -10,12 +10,12 @@
 
 + (Class)superclass
 {
-    return class_getSuperClass(self);
+    return class_getSuperclass(self);
 }
 
 + (id)allocWithZone:(void *)zone
 {
-    return class_createInstance(self);
+    return class_createInstance(self,0);
 }
 
 + (id)alloc
@@ -74,7 +74,7 @@
 {
     Class me = object_getClass(self);
 
-    while (me != nill)
+    while (me != nil)
     {
 	if (aClass == me)
 	    return YES;

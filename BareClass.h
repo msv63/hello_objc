@@ -1,10 +1,10 @@
-#ifdef __PTR_WIDTH__ == 32
+#if __PTR_WIDTH__ == 32
     #pragma pack(4)
 #else
     #pragma pack(8)
 #endif
 
-__attribute_((objc_root_class))
+__attribute__((objc_root_class))
 @interface BareClass
 {
     Class isa;
